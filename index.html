@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h2>Pocket Money Monster</h2>
+  <div ng-controller="divController">
+    <hr>
+    <h3>{{ myName }}</h3>
+    <h2 ng-bind="myFavoriteLanguage"></h2>
+    <h1>{{ myFavoriteJSLibrary }}</h1>
+    <hr>
+    <div>
+      <h2>
+        Hello my name is {{ myName }},
+        my favorite Language is {{ myFavoriteLanguage }},
+        because the {{ myFavoriteJSLibrary }} library is awesome
+      </h2>
+    </div>
+
+    <div>
+      2 way binding
+      <input type="text" ng-model="myName">
+      <input type="text" ng-model="myFavoriteLanguage">
+      <input type="text" ng-model="myFavoriteJSLibrary">
+    </div>
+    <hr>
+    ----
+    submit then renew
+    <i>{{ pokemon.name }}</i>
+    <i>{{ pokemon.language }}</i>
+    <i>{{ pokemon.library }}</i>
+    ---
+    <div>
+      <input type="text" ng-model="pokemon.name">
+      <input type="text" ng-model="pokemon.language">
+      <input type="text" ng-model="pokemon.library">
+      <button ng-click='update()'>{{ now }}</button>
+    </div>
+    <hr>
+
+  </div>
+  <div ng-controller="myController as c">
+    <p ng-bind="c.sashimi"></p>
+  </div>
+  <div ng-controller="nextController as n">
+    <h1>{{ n.title }}</h1>
+  </div>
+
+</body>
+<script src="./bower_components/angular/angular.js"></script>
+<script src="./main.js"></script>
+</html>
